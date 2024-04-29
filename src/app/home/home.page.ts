@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -6,7 +7,18 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+  constructor(private router: Router) { }
+  studentName = 'Felippe Ribeiro Rosa';
+  studentPhoto = '/assets/perfil.jpg';
+  studentCode = 'ADS0301M';
+  
+  ngOnInit(){
 
-  constructor() {}
+  }
+goToCalculator() {
+  this.router.navigate(['/calculator']);
+}
 
 }
+
+
